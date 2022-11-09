@@ -1,0 +1,19 @@
+pwd - print working directory
+ls - list items
+ls -a - List all items
+ls -l - list item details
+cd - change directory
+cd .. or .. - move up 1 directory
+cd ../../.. - to move up several directories
+rm - remove
+rm -fr - force remove recursively
+touch - create a file
+mkdir - make directory
+code . - open all files in current directory in VSCode
+mv - move
+cp - copy
+mv -r - move a folder
+cp -r - copy a folder
+history - list of previous commands
+cmd + k - clear screen
+Up arrow - shows previous commands
