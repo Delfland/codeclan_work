@@ -23,7 +23,7 @@ def join_string(first_str, second_str):
 def add_string_as_number(str_1, str_2):
     return int(str_1) + int(str_2)
 
-def number_to_full_month_name(index_num):
+def number_to_full_month_name(index_num): #could also use dictionary instead of list
     months_of_the_year = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
     return months_of_the_year[index_num-1]
 
@@ -32,13 +32,13 @@ def number_to_short_month_name(index_num):
     return short_months[index_num-1]
 
 def volume_calculation(length):
-    total_volume = length * length * length
+    total_volume = length * length * length #or length**3
     return total_volume
 
 def reverse_string(string):
-    reverse_result = string[::-1]
+    reverse_result = string[::-1] #or string.reverse()
     return reverse_result
 
 def farenheit_convert(farenheit):
-    celsius = (farenheit - 32) * 0.5556
-    return celsius
+    result = (farenheit - 32) * 0.5556
+    return round(result, 2) #rounds up float with 2 decimals places
