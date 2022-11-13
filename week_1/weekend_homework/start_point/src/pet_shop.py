@@ -56,11 +56,13 @@ def customer_can_afford_pet(customer, new_pet):
     else:
         return False
 
-# def sell_pet_to_customer(pet_shop, pet, customer):
-#     for pet in pet_shop:
-#         customer["pets"].append(pet)
-#         customer["cash"]  -= pet_shop["pets"]["price"]
-#         pet_shop["admin"]["total_cash"] += pet_shop["pets"]["price"]
-#         pet_shop["admin"]["pets_sold"] = 
-#     return 
+def sell_pet_to_customer(pet_shop, pet, customer):
+    customer["pets"].append(pet)
+    if pet in customer["pets"]:
+        pet_shop["admin"]["pets_sold"] += 1
+        pet_shop["admin"]["total_cash"] += pet["price"]
+        customer["cash"] -= pet["price"]
+
+
+
 
