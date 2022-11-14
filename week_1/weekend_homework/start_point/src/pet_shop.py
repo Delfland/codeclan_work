@@ -38,17 +38,17 @@ def remove_pet_by_name(pet_shop, name):
 def add_pet_to_stock(pet_shop, new_pet):
     pet_shop["pets"].append(new_pet)
 
-def get_customer_cash(costumer):
-    return costumer["cash"]
+def get_customer_cash(customer):
+    return customer["cash"]
 
-def remove_customer_cash(costumer, cash):
-    costumer["cash"] -= cash
+def remove_customer_cash(customer, cash):
+    customer["cash"] -= cash
 
-def get_customer_pet_count(costumer):
-    return len(costumer["pets"])
+def get_customer_pet_count(customer):
+    return len(customer["pets"])
 
-def add_pet_to_customer(costumer, new_pet):
-    costumer["pets"].append(new_pet)
+def add_pet_to_customer(customer, new_pet):
+    customer["pets"].append(new_pet)
 
 def customer_can_afford_pet(customer, new_pet):
     if customer["cash"] >= new_pet["price"]:
@@ -56,12 +56,25 @@ def customer_can_afford_pet(customer, new_pet):
     else:
         return False
 
+# def sell_pet_to_customer(pet_shop, pet, customer):
+#     customer["pets"].append(pet)
+#     if pet in customer["pets"] and get_customer_cash >= pet["price"]:
+#         pet_shop["admin"]["pets_sold"] += 1
+#         pet_shop["admin"]["total_cash"] += pet["price"]
+#         customer["cash"] -= pet["price"]
+
+
 def sell_pet_to_customer(pet_shop, pet, customer):
-    customer["pets"].append(pet)
-    if pet in customer["pets"]:
-        pet_shop["admin"]["pets_sold"] += 1
-        pet_shop["admin"]["total_cash"] += pet["price"]
-        customer["cash"] -= pet["price"]
+    if pet != None and customer_can_afford_pet(customer, pet):
+        remove_pet_by_name(pet_shop, pet["name"])
+        add_pet_to_customer(customer, pet)
+        get_customer_pet_count(customer)
+        remove_customer_cash(customer, pet["price"])
+        remove_pet_by_name(pet_shop, pet["name"])
+        increase_pets_sold(pet_shop, 1)
+        add_or_remove_cash(pet_shop, pet["price"])
+        
+
 
 
 
