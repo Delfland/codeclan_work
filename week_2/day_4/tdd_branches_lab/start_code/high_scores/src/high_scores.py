@@ -1,10 +1,21 @@
 def latest(scores):
-    pass
+    return scores[-1]
 
 
 def personal_best(scores):
-    pass
+    best_score = max(scores)
+    return best_score
 
 
 def personal_top_three(scores):
-    pass
+    size = len(scores)
+    if size < 3:
+        scores.sort()
+        return scores[0:size]
+    scores.sort()
+    return scores[-3:]
+    
+
+def sort_scores(scores):
+    scores.sort()
+    return scores
