@@ -18,8 +18,14 @@ class TestPub(unittest.TestCase):
     def test_pub_has_till(self):
         self.assertEqual(100.00, self.pub.till)
 
-    #create test_to_add_drink_to_pub_drinks
+    def test_can_get_drinks_count(self):
+        self.drinks_count(self.drinks)
+        self.assertEqual(0, self.pub.drinks)
 
+    def test_can_add_drinks_to_pub(self):
+        self.add_drinks(self.drink_1)
+        self.add_drinks(self.drink_2)
+        self.assertEqual(2, pub.drinks_count())
     #create test_get_drinks_count
 
     def test_increase_sum_in_till(self):
