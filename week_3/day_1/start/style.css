@@ -1,0 +1,46 @@
+body{
+    font-family: Helvetica, Arial, sans-serif; 
+    margin: 0;
+}
+
+body > footer{
+    background-color: dodgerblue;
+    padding: 16px;
+    color: white;
+    text-align: center;
+}
+
+body > header{
+    background-color: dodgerblue;
+}
+
+#logo{
+    margin: 0;
+    font-family: Montserrat, sans-serif;
+}
+
+nav > ul{
+    list-style: none;
+}
+nav > ul > li > a{
+    color: white;
+}
+body > main > article{
+    margin: auto;
+    width: 70%;
+}
+.like-button{
+    background: transparent;
+    border: 1px solid dodgerblue;
+
+}
+.like-share{
+    background: transparent;
+    border: 1px solid green;
+
+}
+
+
+    
+
+
