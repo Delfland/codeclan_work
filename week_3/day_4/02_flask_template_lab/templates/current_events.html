@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Our upcoming events:</h2>
+<ul>
+    {% for event in events %}
+        <li>
+            <p><b>Date:</b> {{ event.date }}</p>
+            <p><b>Event:</b> {{ event.name }}</p>
+            <p><b>Room:</b>{{ event.room }}</p>
+            <a href="/events/{{loop.index0}}">Find out more</a>
+        </li>
+    {% endfor %}
+</ul>    
+{% endblock %}
+

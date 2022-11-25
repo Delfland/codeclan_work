@@ -1,0 +1,22 @@
+<html>
+<header>
+    <title>{{ title }} - All orders</title>
+</header>
+
+<body>
+    <h1>Delph's Fish and Chips - Tonight's orders</h1>
+
+    {% for order in orders %}
+    <div>
+        <p>
+            {{ order.customer_name }}: {{ order.quantity }}, {{ order.food_supper }}, {{ order.order_date }} 
+            <!-- <a href="/order/{{ orders.index(order) }}">open order</a> -->
+            <!-- or -->
+            <a href="/order/{{loop.index0}}">Open order</a>
+        </p>
+    </div>
+    {% endfor %}
+
+</body>
+
+</html>

@@ -141,47 +141,66 @@ input {
   color: white;
   font-size: 10pt;
   height: 30px;
-  width: 80px;
+  width: 802_css_lab0px;
   border: 0;
   border-radius: 4px;
   cursor:pointer;
 }
 
 .container {
-  /* The destinations are enclosed in an article element that we want to make a grid */
+  display:grid;
+  justify-content:center;
+  /* The destinations are enclosed in an article element that we want 
+  to make a grid */
   /* Set the display property to 'grid' and justify the content */
 }
 
 .row {
-  /* The row of the grid has 3 columns which should be the same width and roughly a third of the available space */
+  grid-template-columns: 30% 30% 30%;
+
+  /* The row of the grid has 3 columns which should be the same width 
+  and roughly a third of the available space */
   /* Use the grid-template-columns property to set each column to 30% */
   /* You can experiment with different units for the width values */
   /* Hint: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns */
 }
 
 .section-title {
-  /* The <div> with class section-title contains an <h3> child which we want to center */
-  /* The easiest way to center child elements is to set the display property to 'flex' and justify the content */
+  display: flex;
+  justify-content: center;
+  /* The <div> with class section-title contains an <h3> child 
+  which we want to center */
+  /* The easiest way to center child elements is to set the display 
+  property to 'flex' and justify the content */
 }
 
 .single-destination {
+  margin: 1rem;
+  overflow: hidden;
   /* Use the margin property to make some space between the destinations */
   /* Set the overflow to 'hidden' */
-  /* The overflow CSS shorthand property sets the desired behaviour for an element's overflow 
-    — i.e. when an element's content is too big to fit. In this case, the image is too big too fit. */
+  /* The overflow CSS shorthand property sets the desired behaviour for 
+  an element's overflow 
+    — i.e. when an element's content is too big to fit. In this case, 
+    the image is too big too fit. */
 }
 
 img {
   /* Set the max-width property to 100% */
+  max-width: 100%;
 }
 
-/* Let's take the training wheels off. Finish off the page by adding styles to the remaining blocks */
+/* Let's take the training wheels off. Finish off the page by adding 
+styles to the remaining blocks */
 
 .testimonial-area {
+  background-color:dimgray;
   /* Write your code here */
 }
 
 .single-testmonial{
+  display:flex;
+  
   /* Write your code here */
 }
 
