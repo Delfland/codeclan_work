@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delph's Library</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1>Delph's Library</h1>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/record/new">Add to Catalogue</a>
+            </li>
+        </ul>
+    </nav>
+</header>
+    {% block content %}
+        
+    {% endblock %}
+</body>
+<footer>
+    <h3>Our Site</h3>
+    <nav>
+        <ul>
+            <li>
+                <a href="/">Home</a>
+            </li>
+            <li>
+                <a href="/record/new">Add to Catalogue</a>
+            </li>
+        </ul>
+    </nav>
+</footer>
+</html>

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Library Catalogue</h2>
+<ul>
+    {% for book in books %}
+    <li>
+        <p><b>Title:</b> {{ book.title }}</p>
+        <p><b>Author:</b> {{ book.author }}</p>
+        <p><b>Check-out book:</b>{% if book.checked_out %}
+                                    Unavailable
+                                {% else %} 
+                                    Available
+                                {% endif %}</p>
+        <a href="/record/{{loop.index0}}">See book</a>
+        <form class="form-inline" action="/record/delete/{{ book.title }}" method="POST">
+            <input type="submit" value="Delete Record">
+          </form>
+    </li>
+    {% endfor %}
+</ul> 
+{% endblock %}
