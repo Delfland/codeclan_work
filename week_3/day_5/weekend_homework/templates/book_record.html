@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2> {{ book.title }} </h2>
+<h3> {{ book.title }} </h3>
 <ul>
     <li>
         <p><b>Author:</b> {{ book.author }}</p>
@@ -10,7 +10,7 @@
         <p><b>Genre:</b> {{ book.genre }} </p>
     </li>
     <li>
-        <p><b>Check-out book:</b>{% if book.checked_out %}
+        <p><b>Check-out book:</b>{% if book.checked_out == True %}
             Unavailable
         {% else %} 
             Available

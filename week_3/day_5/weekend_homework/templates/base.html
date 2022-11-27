@@ -9,34 +9,37 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
 </head>
 <body>
-<header>
-    <h1>Delph's Library</h1>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/record/new">Add to Catalogue</a>
-            </li>
-        </ul>
-    </nav>
-</header>
+    <header>
+        <h1>Delph's Library</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/record/new">Add to Catalogue</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
     {% block content %}
         
     {% endblock %}
+    </main>
+    <footer>
+        <h3>Our Site</h3>
+        <nav>
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/record/new">Add to Catalogue</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
 </body>
-<footer>
-    <h3>Our Site</h3>
-    <nav>
-        <ul>
-            <li>
-                <a href="/">Home</a>
-            </li>
-            <li>
-                <a href="/record/new">Add to Catalogue</a>
-            </li>
-        </ul>
-    </nav>
-</footer>
 </html>

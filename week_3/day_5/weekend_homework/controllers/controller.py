@@ -29,7 +29,7 @@ def save_record():
     new_book = Book(record_title, record_author, record_genre, checked_out)
     add_record(new_book)
 
-    return render_template("index.html", books=catalogue)
+    return render_template("index.html", books=catalogue, book=new_book)
 
 @app.route('/record/delete/<title>', methods=['POST'])
 def delete(title):

@@ -2,9 +2,9 @@
 
 {% block content %}
 <h2>Library Catalogue</h2>
-<ul>
+<ul id="catalogue">
     {% for book in books %}
-    <li>
+    <li id="catalogue_list">
         <p><b>Title:</b> {{ book.title }}</p>
         <p><b>Author:</b> {{ book.author }}</p>
         <p><b>Check-out book:</b>{% if book.checked_out %}
