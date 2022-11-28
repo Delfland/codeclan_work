@@ -26,7 +26,7 @@ def save_record():
     record_genre = form_data["book_genre"]
     checked_out = "checked_out" in form_data
 
-    new_book = Book(record_title, record_author, record_genre, checked_out)
+    new_book = Book(record_title, record_author, record_genre, False)
     add_record(new_book)
 
     return render_template("index.html", books=catalogue, book=new_book)
