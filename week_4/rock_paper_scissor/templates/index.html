@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form action="/play_game" method="post">
+    <label for="player_a">Player A:</label>
+    <input type="text" name="player_a" id="player_a">
+    <label for="player_b">Player B:</label>
+    <input type="text" name="player_b" id="player_b">
+    <input type="submit" value="Save players"> 
+</form>
+    
+{% endblock %}
