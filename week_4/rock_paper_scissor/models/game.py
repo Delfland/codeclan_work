@@ -1,10 +1,6 @@
-from models.player import Player
+game_players = []
 
-class Game:
-
-    def __init__(self, player_a, player_b):
-        self.player_a = player_a
-        self.player_b = player_b
-        self.players = []
-
-    
+def add_players(player_1, player_2):
+    game_players.append(player_1)
+    game_players.append(player_2)
+    return game_players

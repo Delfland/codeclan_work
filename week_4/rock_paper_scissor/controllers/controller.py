@@ -1,10 +1,22 @@
 from flask import render_template, request, redirect
+from models.player import Player
+from models.game import add_players
 
 from app import app
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
+@app.route("/play_game", methods=["POST"])
+def enter_players():
+    player_a = request.form["player_a"]
+    player_b = request.form["player_b"]
+
+    new_player_a = Player(player_a, None)
+    new_player_b = Player(player_b, None)
+    new_players = add_players(new_player_a, new_player_b)
+    return render_template("play_game.html", players = new_players)
 
 # @app.route("/record/<int:index_number>")
 # def record(index_number):

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<main>
+    <section id="player_a">
+        <h2>{{ players[0].name }} vs {{ players[1].name }}</h2>
+            <form action="/play_game" method="post">
+                <input type="submit" value="ROCK - PAPER - SCISSOR"> 
+            </form>
+    </section>
+    <section id="player_b">
+        <h2></h2>
+
+    </section>
+</main>
+{% endblock %}

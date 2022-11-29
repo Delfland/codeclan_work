@@ -2,7 +2,7 @@ import random
 
 class Player:
 
-    def __init__(self, name, choice):
+    def __init__(self, name, choice = None):
         self.name = name
         self.choice = choice
 
@@ -16,3 +16,4 @@ class Player:
             return self.choice
         if random_choice == 3:
             self.choice = "scissor"
+            return self.choice
