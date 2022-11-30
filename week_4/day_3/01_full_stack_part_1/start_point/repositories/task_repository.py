@@ -8,8 +8,7 @@ def save(task):
     sql = "INSERT INTO tasks (description, user_id, duration, completed) VALUES (%s, %s, %s, %s) RETURNING *"
     values = [task.description, task.user.id, task.duration, task.completed]
     results = run_sql(sql, values)
-    id = results[0]['id']
-    task.id = id
+    task.id = results[0]['id']
     return task
 
 

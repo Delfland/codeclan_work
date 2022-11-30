@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for book in all_books_key %}
+        <ul>
+            <li>
+                <p>{{ book.title }}</p>
+                <p>{{ book.author.name }}</p>
+                <p>{{ book.genre }}</p>
+                <div class="buttons">
+                    <form class="delete-form" action="/books/{{book.id}}/delete" method="post">
+                        <button>DELETE</button>
+                    </form>
+            </li>
+        </ul>    
+    {% endfor %}
+{% endblock %}
