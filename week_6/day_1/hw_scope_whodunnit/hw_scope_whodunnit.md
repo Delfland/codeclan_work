@@ -27,7 +27,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-
+// verdict is 'The murderer is Miss Scarlet.'
 #### Episode 2
 
 ```js
@@ -45,7 +45,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-
+// verdict is 'The murderer is Professor Plum.'
 #### Episode 3
 
 ```js
@@ -62,7 +62,7 @@ console.log('First Verdict: ', firstVerdict);
 const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 ```
-
+// verdict is 'The murderer is Mrs Peacock.'
 #### Episode 4
 
 ```js
@@ -79,7 +79,7 @@ const suspects = declareAllSuspects();
 console.log(suspects);
 console.log(`Suspect three is ${suspectThree}.`);
 ```
-
+// verdict is 'The suspects are Miss Scarlet, Professor Plum, Colonel Mustard.'
 #### Episode 5
 
 ```js
@@ -101,7 +101,7 @@ changeWeapon('Revolver');
 const verdict = declareWeapon();
 console.log(verdict);
 ```
-
+// verdict is The weapon is the candle stick.
 #### Episode 6
 
 ```js
@@ -125,7 +125,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-
+// verdict is the murderer is Mrs White.
 #### Episode 7
 
 ```js
@@ -155,7 +155,7 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-
+// The murderer is Miss Scarlet
 #### Episode 8
 
 ```js
@@ -194,7 +194,7 @@ changeScenario();
 const verdict = declareWeapon();
 console.log(verdict);
 ```
-
+// The weapon is Lead Pipe.
 #### Episode 9
 
 ```js
@@ -211,7 +211,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 ```
-
+The murderer is Mrs Peacock.
 ### Extensions
 
 Make up your own episode!
