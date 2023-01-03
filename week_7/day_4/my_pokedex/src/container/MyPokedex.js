@@ -16,9 +16,8 @@ const MyPokedex = () => {
 
     useEffect(() => {
         if(selectedPokemon){
-            getSinglePokemon()
-        }
-        
+            getSinglePokemon();
+        }        
     }, [selectedPokemon])
 
     const getPokemons = function(){
@@ -28,7 +27,6 @@ const MyPokedex = () => {
     }
 
     const getSinglePokemon = function(){
-        console.log(selectedPokemon.url);
         fetch(selectedPokemon.url)
         .then(res => res.json())
         .then(data => setSelectedPokemonDetail(data))
@@ -42,8 +40,10 @@ const MyPokedex = () => {
     return (
         <>
         <h1>My Pokedex</h1>
+        <div id='splash'>
         <Dropdown allPokemons={allPokemons} onPokemonSelected={onPokemonSelected}/>
         {selectedPokemonDetail? <PokeEntry selectedPokemon={selectedPokemon} selectedPokemonDetail={selectedPokemonDetail}/> : null}
+        </div>
         </>
     );
 }

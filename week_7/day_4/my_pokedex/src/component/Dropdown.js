@@ -12,7 +12,7 @@ const Dropdown = ({allPokemons, onPokemonSelected}) => {
     }
 
     return (
-        <select defaulValue="" onChange={handleChange}>
+        <select defaultvalue="" onChange={handleChange}>
             <option value="" selected>Select a Pokemon</option>
             {pokeOption}
         </select>
