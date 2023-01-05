@@ -1,8 +1,7 @@
 import './PokeEntry.css';
 import PokeAbilities from './PokeAbilities';
-import AddButton from './AddButton';
 
-const PokeEntry = ({selectedPokemon, selectedPokemonDetail}) => {
+const PokeEntry = ({selectedPokemon, selectedPokemonDetail, onPokeballSelected}) => {
 
     const pokeHeight = selectedPokemonDetail.height * 10;
     const pokeWeight = selectedPokemonDetail.weight / 10;
@@ -15,6 +14,10 @@ const PokeEntry = ({selectedPokemon, selectedPokemonDetail}) => {
         return <PokeAbilities key={index} ability={ability} index={index}/>
     })
 
+    const handleClick = (event) => {
+        onPokeballSelected(event.target.value)
+    }
+
     return (
         <>
         <h4>No. {selectedPokemonDetail.id}</h4>
@@ -25,7 +28,7 @@ const PokeEntry = ({selectedPokemon, selectedPokemonDetail}) => {
         <br></br>
         <h4>Abilities:</h4>
         <ol>{pokeAbility}</ol>
-        <AddButton/>
+        <button onClick={handleClick} value={selectedPokemonDetail}>Add to Pokeball</button>
         </>
     )
 }

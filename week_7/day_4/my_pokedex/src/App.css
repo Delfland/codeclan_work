@@ -80,7 +80,7 @@ h1 {
   margin-left: 2rem;
 }
 
-aside {
+#aside {
   display: flex;
   flex-direction: column;
   align-content: space-between;

@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Dropdown from "../component/Dropdown";
+import PokeballEntry from "../component/PokeballEntry";
 import PokeEntry from "../component/PokeEntry";
 
 
@@ -8,6 +9,7 @@ const MyPokedex = () => {
     const [allPokemons, setAllPokemons] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState(null);
     const [selectedPokemonDetail, setSelectedPokemonDetail] = useState(null);
+    const [selectedPokeball, setSelectedPokeball] = useState(null);
 
 
     useEffect(() => {
@@ -36,18 +38,23 @@ const MyPokedex = () => {
         setSelectedPokemon(pokemon)
     }
 
+    const onPokeballSelected = function(pokemon) {
+        setSelectedPokeball(pokemon)
+    }
+
     return (
         <>
         <h1>My Pokedex</h1>
         <div id="content">
             <div id='splash'>
                 <Dropdown allPokemons={allPokemons} onPokemonSelected={onPokemonSelected}/>
-                {selectedPokemonDetail? <PokeEntry selectedPokemon={selectedPokemon} selectedPokemonDetail={selectedPokemonDetail}/> : null}
+                {selectedPokemonDetail? <PokeEntry selectedPokemon={selectedPokemon} selectedPokemonDetail={selectedPokemonDetail} onPokeballSelected={onPokeballSelected}/> : null}
             </div>
-            <aside>
+            <div id="aside">
                 <img width="512" alt="Pokebola-pokeball-png-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/512px-Pokebola-pokeball-png-0.png"/>
                 <h2>My pokeball:</h2>
-            </aside>
+                {selectedPokeball? <PokeballEntry selectedPokeball={selectedPokeball}/> : null}
+            </div>
         </div>
         </>
     );
