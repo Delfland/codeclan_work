@@ -27,3 +27,15 @@ ol li:before {
 ol:first-of-type {
     counter-reset: mycounter;
     }
+
+button {
+    width: 200px;
+    padding: 5px 5px 5px 5px;
+    margin: 15px 0;
+    font-size: 1.1rem;
+    font-family: Audiowide;
+    text-align: center;
+    background: 96% / 15% no-repeat whitesmoke;
+    border: 2px solid navy;
+    border-radius: 4px;
+}

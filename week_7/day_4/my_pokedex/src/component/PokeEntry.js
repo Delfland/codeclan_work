@@ -28,7 +28,7 @@ const PokeEntry = ({selectedPokemon, selectedPokemonDetail, onPokeballSelected})
         <br></br>
         <h4>Abilities:</h4>
         <ol>{pokeAbility}</ol>
-        <button onClick={handleClick} value={selectedPokemonDetail}>Add to Pokeball</button>
+        <button onClick={handleClick} value={selectedPokemonDetail}><b>Add to Pokeball</b></button>
         </>
     )
 }
