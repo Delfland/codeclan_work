@@ -36,13 +36,18 @@ const MyPokedex = () => {
         setSelectedPokemon(pokemon)
     }
 
-
     return (
         <>
         <h1>My Pokedex</h1>
-        <div id='splash'>
-        <Dropdown allPokemons={allPokemons} onPokemonSelected={onPokemonSelected}/>
-        {selectedPokemonDetail? <PokeEntry selectedPokemon={selectedPokemon} selectedPokemonDetail={selectedPokemonDetail}/> : null}
+        <div id="content">
+            <div id='splash'>
+                <Dropdown allPokemons={allPokemons} onPokemonSelected={onPokemonSelected}/>
+                {selectedPokemonDetail? <PokeEntry selectedPokemon={selectedPokemon} selectedPokemonDetail={selectedPokemonDetail}/> : null}
+            </div>
+            <aside>
+                <img width="512" alt="Pokebola-pokeball-png-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/512px-Pokebola-pokeball-png-0.png"/>
+                <h2>My pokeball:</h2>
+            </aside>
         </div>
         </>
     );
