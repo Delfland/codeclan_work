@@ -1,3 +1,4 @@
+import React, {useState} from 'react';
 import './PokeEntry.css';
 import PokeAbilities from './PokeAbilities';
 
@@ -14,8 +15,8 @@ const PokeEntry = ({selectedPokemon, selectedPokemonDetail, onPokeballSelected})
         return <PokeAbilities key={index} ability={ability} index={index}/>
     })
 
-    const handleClick = (event) => {
-        onPokeballSelected(event.target.value)
+    const handleClick = () => {
+        onPokeballSelected(selectedPokemonDetail)
     }
 
     return (
@@ -28,7 +29,7 @@ const PokeEntry = ({selectedPokemon, selectedPokemonDetail, onPokeballSelected})
         <br></br>
         <h4>Abilities:</h4>
         <ol>{pokeAbility}</ol>
-        <button onClick={handleClick} value={selectedPokemonDetail}><b>Add to Pokeball</b></button>
+        <button onClick={handleClick} >Add to Pokeball</button>
         </>
     )
 }
