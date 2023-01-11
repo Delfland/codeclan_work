@@ -26,13 +26,17 @@ const Chaiovna = () => {
         setUserName(name)
     }
 
+    const onCheckout = function() {
+        setBasketItems([])
+    }
+
     return (
     <Router>
         <NavBar/>
         <Routes>
             <Route path="/" element={ <HomePage onNameSubmit={onNameSubmit}/> } />
             <Route path="/products" element={<Products teaProducts={teaProducts} onItemClick={onItemClick}/>} />
-            <Route path="/basket" element={<Basket basketItems={basketItems} userName={userName}/>} />
+            <Route path="/basket" element={<Basket basketItems={basketItems} userName={userName} onCheckout={onCheckout}/>} />
         </Routes>
     </Router>
     )

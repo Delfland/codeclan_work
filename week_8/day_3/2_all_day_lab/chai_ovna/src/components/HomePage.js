@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 
 const HomePage = ({onNameSubmit}) => {
 
@@ -39,10 +40,7 @@ const HomePage = ({onNameSubmit}) => {
             value={lastName}
             onChange={handleLastNameChange}
             />
-            <input
-            type="submit"
-            value="Submit"
-            />
+            <button type="submit"><Link to="/products">Submit</Link></button>
         </form>
         </>
     )
