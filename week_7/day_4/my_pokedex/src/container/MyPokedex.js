@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from "react";
 import Dropdown from "../component/Dropdown";
-import PokeballEntry from "../component/PokeballEntry";
+import Pokeball from "../component/Pokeball";
 import PokeEntry from "../component/PokeEntry";
 
 
@@ -9,7 +9,7 @@ const MyPokedex = () => {
     const [allPokemons, setAllPokemons] = useState([]);
     const [selectedPokemon, setSelectedPokemon] = useState(null);
     const [selectedPokemonDetail, setSelectedPokemonDetail] = useState(null);
-    const [selectedPokeball, setSelectedPokeball] = useState(null);
+    const [selectedPokeball, setSelectedPokeball] = useState([]);
 
 
     useEffect(() => {
@@ -39,8 +39,9 @@ const MyPokedex = () => {
     }
 
     const onPokeballSelected = function(pokemon) {
-        console.log(pokemon);
-        setSelectedPokeball(pokemon)
+        const pokemonsToAdd = [...selectedPokeball]
+        if (pokemonsToAdd.length <= 2) {pokemonsToAdd.push(pokemon)}
+        setSelectedPokeball(pokemonsToAdd)
     }
 
     return (
@@ -54,7 +55,7 @@ const MyPokedex = () => {
             <div id="aside">
                 <img width="512" alt="Pokebola-pokeball-png-0" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Pokebola-pokeball-png-0.png/512px-Pokebola-pokeball-png-0.png"/>
                 <h2>My pokeball:</h2>
-                {selectedPokeball? <PokeballEntry selectedPokeball={selectedPokeball}/> : null}
+                {selectedPokeball? <Pokeball selectedPokeball={selectedPokeball}/> : null}
             </div>
         </div>
         </>
