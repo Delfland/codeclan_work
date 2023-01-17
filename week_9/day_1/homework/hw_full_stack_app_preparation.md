@@ -45,11 +45,11 @@ it connects the routes from create_router.js to the gamescollection in the mongo
 
 5. What process does the the client (front-end) use to communicate with the server?
 
-it uses the callback functions in games services
+fetch request
 
 6. What optional second argument does the `fetch` method take? And what is it used for in this application? Hint: See [Using Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) on the MDN docs
 
-an init object that allows you to model the data
+an init object that allows you to change the method
 
 7. Which of the games API routes does the front-end application consume (i.e. make requests to)?
 
