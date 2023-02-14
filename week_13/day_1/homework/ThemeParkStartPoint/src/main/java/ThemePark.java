@@ -1,12 +1,9 @@
 import attractions.Attraction;
-import attractions.Dodgems;
 import behaviours.IReviewed;
 import people.Visitor;
-import stalls.CandyflossStall;
 import stalls.Stall;
-
 import java.util.ArrayList;
-import java.util.Collection;
+
 
 public class ThemePark {
 
@@ -54,18 +51,13 @@ public class ThemePark {
 
     public ArrayList<IReviewed> getAllReviewed() {
         ArrayList<IReviewed> allReviewed = new ArrayList<>();
-        for (IReviewed attraction : attractions) {
-            allReviewed.add(attraction);
-        }
-        for (IReviewed stall : stalls) {
-            allReviewed.add(stall);
-        }
+        allReviewed.addAll(attractions);
+        allReviewed.addAll(stalls);
         return allReviewed;
     }
 
-//    public void visit(Visitor visitor, Attraction attraction) {
-//        visitor.addAttraction(attraction);
-//        int visitCount = attraction.getVisitCount();
-//        visitCount++;
-//    }
+    public void visit(Visitor visitor, Attraction attraction) {
+        visitor.addAttraction(attraction);
+        attraction.incrementVisitCount();
+    }
 }

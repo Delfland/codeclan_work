@@ -51,10 +51,11 @@ public class ThemeParkTest {
         assertEquals(4, themePark.getAllReviewed().size());
     }
 
-//    @Test void canLetAVisitorVisitAnAttraction{
-//        themePark.visit(visitor, dodgems);
-//        assertEquals(1, visitor.getVisitedAttractions().size());
-//        assertEquals(1, dodgems.getVisitCount());
-//    }
+    @Test
+    public void canLetAVisitorVisitAnAttraction(){
+        themePark.visit(visitor, dodgems);
+        assertEquals(1, visitor.getVisitedAttractions().size());
+        assertEquals(1, dodgems.getVisitCount());
+    }
 
 }
